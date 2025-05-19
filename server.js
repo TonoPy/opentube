@@ -58,11 +58,10 @@ app.get('/upload', (req, res) => {
   res.render('upload');
 });
 
-app.get('/search-result', (req, res) => {
-  const query = req.query.query;
-  // ยังไม่มีระบบค้นหาจริง เอาไว้ลองแสดงผลเฉย ๆ
-  res.send(`ผลการค้นหา: ${query}`);
-});
+app.get('/search', (req, res) => {
+    const query = req.query.q || '';  // รับค่าจาก query string (หรือเป็นค่าว่างถ้าไม่มี q)
+    res.render('search', { q: query });  // ส่งค่าของ q ไปให้กับ ejs
+});;
 
 app.get('/search', (req, res) => {
   res.render('search');
