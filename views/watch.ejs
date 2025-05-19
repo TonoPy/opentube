@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <title><%= video.title %></title>
+</head>
+<body>
+  <div class="container">
+    <h1><%= video.title %></h1>
+    <video controls src="/uploads/<%= video.filename %>"></video>
+    <p><%= video.description %></p>
+    <a href="/">Back</a>
+  </div>
+</body>
+</html>

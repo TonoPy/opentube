@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <title>MyTube</title>
+</head>
+<body>
+  <div class="container">
+    <h1>MyTube</h1>
+    <a href="/upload">Upload</a> | <a href="/search">Search</a>
+    <div id="videoList">
+      <% videos.forEach(video => { %>
+        <div class="video-item">
+          <h3><a href="/watch/<%= video.id %>"><%= video.title %></a></h3>
+          <p><%= video.description %></p>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>

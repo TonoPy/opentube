@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <title>Search</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Search</h1>
+    <form method="get" action="/search">
+      <input type="text" name="q" placeholder="Search..." value="<%= q %>">
+      <button type="submit">Search</button>
+    </form>
+    <div id="videoList">
+      <% result.forEach(video => { %>
+        <div class="video-item">
+          <h3><a href="/watch/<%= video.id %>"><%= video.title %></a></h3>
+          <p><%= video.description %></p>
+        </div>
+      <% }) %>
+    </div>
+    <a href="/">Back</a>
+  </div>
+</body>
+</html>

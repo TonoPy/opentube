@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/script.js"></script>
+  <title>Upload</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Video</h1>
+    <form id="uploadForm">
+      <input type="text" name="title" placeholder="Title" required>
+      <textarea name="description" placeholder="Description" required></textarea>
+      <input type="file" name="video" required>
+      <button type="submit">Upload</button>
+    </form>
+    <div id="progressBarContainer" style="display:none; margin-top: 1rem;">
+      <div id="progressBar" style="height: 20px; width: 0; background: #007BFF; border-radius: 5px;"></div>
+    </div>
+    <a href="/">Back</a>
+  </div>
+</body>
+</html>
