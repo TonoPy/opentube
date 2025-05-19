@@ -58,6 +58,16 @@ app.get('/upload', (req, res) => {
   res.render('upload');
 });
 
+app.get('/search-result', (req, res) => {
+  const query = req.query.query;
+  // ยังไม่มีระบบค้นหาจริง เอาไว้ลองแสดงผลเฉย ๆ
+  res.send(`ผลการค้นหา: ${query}`);
+});
+
+app.get('/search', (req, res) => {
+  res.render('search');
+});
+
 app.post('/upload', upload.single('video'), (req, res) => {
   const data = JSON.parse(fs.readFileSync(dataPath));
   const newVideo = {
